@@ -54,9 +54,9 @@ echo "----------------------Check Done----------------------" >> ${aideTmp}/aide
 
 aide_delete(){
 # Suppression des fichier base signature plus anciens (plus de 7 jours) 
-sudo find ${aideDbStock} -type f -name .gz -mtime +7 -exec rm -f {} +
+sudo find ${aideDbStock} -type f -name '*.gz' -mtime +7 -exec rm -f {} \;
 # Suppression des fichier log plus anciens (plus de 7 jours)
-sudo find ${aideTmp} -type f -name .txt -mtime +7 -exec rm -f {} +
+sudo find ${aideTmp} -type f -name '*.txt' -mtime +7 -exec rm -f {} \;
 }
 
 #Execution des fonctions
